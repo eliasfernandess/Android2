@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="28dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Criar conta"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preencha seus dados"
+            android:textColor="#DDEEEE"
+            android:textSize="16sp"
+            android:layout_marginBottom="32dp" />
+
+        <EditText
+            android:id="@+id/edit_nome_cadastro"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Nome completo"
+            android:inputType="textPersonName"
+            android:background="@drawable/bg_input"
+            android:layout_marginBottom="14dp" />
+
+        <EditText
+            android:id="@+id/edit_email_cadastro"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/bg_input"
+            android:layout_marginBottom="14dp" />
+
+        <EditText
+            android:id="@+id/edit_senha_cadastro"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Senha"
+            android:inputType="textPassword"
+            android:background="@drawable/bg_input"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/bt_cadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="CADASTRAR"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:background="@drawable/bg_button" />
+
+        <ProgressBar
+            android:id="@+id/progressbar_cadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+</ScrollView>

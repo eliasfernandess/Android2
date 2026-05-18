@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="28dp"
+    android:background="@drawable/bg_gradient">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meu Perfil"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp" />
+
+    <EditText
+        android:id="@+id/textNomeUser"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:hint="Nome"
+        android:enabled="false"
+        android:background="@drawable/bg_input"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/textEmailUser"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:hint="E-mail"
+        android:enabled="false"
+        android:background="@drawable/bg_input"
+        android:layout_marginBottom="28dp" />
+
+    <Button
+        android:id="@+id/bt_sair"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="SAIR"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:background="@drawable/bg_button" />
+
+</LinearLayout>
