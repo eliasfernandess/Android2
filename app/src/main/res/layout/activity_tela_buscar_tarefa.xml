@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="6dp"
+            android:text="Buscar 1 registro"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:text="Busca por código, exibe em tabela e permite UPDATE"
+            android:textColor="#DDEEEE"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/edit_codigo_busca"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_input"
+            android:hint="Código da tarefa"
+            android:inputType="text"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp" />
+
+        <Button
+            android:id="@+id/bt_buscar_um_registro"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/bg_button"
+            android:text="BUSCAR"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <TableLayout
+            android:id="@+id/tabela_resultado_unico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/bg_card"
+            android:padding="8dp"
+            android:stretchColumns="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Editar dados do registro encontrado"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edit_titulo_update"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_input"
+            android:hint="Título"
+            android:inputType="textCapSentences"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp" />
+
+        <EditText
+            android:id="@+id/edit_descricao_update"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_input"
+            android:gravity="top"
+            android:hint="Descrição"
+            android:inputType="textMultiLine|textCapSentences"
+            android:padding="18dp" />
+
+        <EditText
+            android:id="@+id/edit_status_update"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_input"
+            android:hint="Status"
+            android:inputType="textCapSentences"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp" />
+
+        <EditText
+            android:id="@+id/edit_data_entrega_update"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_input"
+            android:hint="Data de entrega"
+            android:inputType="date"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp" />
+
+        <Button
+            android:id="@+id/bt_atualizar_registro"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_button"
+            android:text="ATUALIZAR REGISTRO"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/bt_voltar_busca"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_button"
+            android:text="VOLTAR"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,46 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="28dp"
-    android:background="@drawable/bg_gradient">
+    android:background="@drawable/bg_gradient"
+    android:fillViewport="true">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Meu Perfil"
-        android:textColor="#FFFFFF"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="32dp" />
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="28dp">
 
-    <EditText
-        android:id="@+id/textNomeUser"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:hint="Nome"
-        android:enabled="false"
-        android:background="@drawable/bg_input"
-        android:layout_marginBottom="16dp" />
+        <ImageView
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="18dp"
+            android:contentDescription="Logo StudyFlow"
+            android:src="@drawable/ic_studyflow_logo" />
 
-    <EditText
-        android:id="@+id/textEmailUser"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:hint="E-mail"
-        android:enabled="false"
-        android:background="@drawable/bg_input"
-        android:layout_marginBottom="28dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="26dp"
+            android:text="Meu Perfil"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp"
+            android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/bt_sair"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:text="SAIR"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        android:background="@drawable/bg_button" />
+        <EditText
+            android:id="@+id/textNomeUser"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_input"
+            android:hint="Nome"
+            android:inputType="textPersonName"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp" />
 
-</LinearLayout>
+        <EditText
+            android:id="@+id/textEmailUser"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="22dp"
+            android:background="@drawable/bg_input"
+            android:enabled="false"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp" />
+
+        <Button
+            android:id="@+id/bt_atualizar_perfil"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_button"
+            android:text="ATUALIZAR PERFIL"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/bt_voltar_menu_perfil"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_button"
+            android:text="VOLTAR AO MENU"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/bt_sair"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_button"
+            android:text="SAIR"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>

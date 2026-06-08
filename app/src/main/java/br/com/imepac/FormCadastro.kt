@@ -18,18 +18,15 @@ class FormCadastro : AppCompatActivity() {
     private lateinit var editSenha: EditText
     private lateinit var btCadastrar: Button
     private lateinit var progressBar: ProgressBar
-
     private lateinit var auth: FirebaseAuth
     private lateinit var db: FirebaseFirestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_form_cadastro)
-
         supportActionBar?.hide()
 
         iniciarComponentes()
-
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
 
@@ -75,7 +72,6 @@ class FormCadastro : AppCompatActivity() {
 
         auth.createUserWithEmailAndPassword(email, senha)
             .addOnCompleteListener { task ->
-
                 if (task.isSuccessful) {
                     salvarDadosUsuario(nome, email)
                 } else {
@@ -101,7 +97,8 @@ class FormCadastro : AppCompatActivity() {
         val dadosUsuario = hashMapOf(
             "nome" to nome,
             "email" to email,
-            "uid" to usuarioId
+            "uid" to usuarioId,
+            "criadoEm" to System.currentTimeMillis()
         )
 
         db.collection("Usuarios")
@@ -109,16 +106,12 @@ class FormCadastro : AppCompatActivity() {
             .set(dadosUsuario)
             .addOnSuccessListener {
                 progressBar.visibility = View.GONE
-
                 Toast.makeText(this, "Cadastro realizado com sucesso", Toast.LENGTH_SHORT).show()
-
-                val intent = Intent(this, TelaPerfil::class.java)
-                startActivity(intent)
+                startActivity(Intent(this, TelaMenu::class.java))
                 finish()
             }
             .addOnFailureListener { erro ->
                 progressBar.visibility = View.GONE
-
                 Toast.makeText(
                     this,
                     "Erro ao salvar dados: ${erro.message}",

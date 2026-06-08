@@ -4,26 +4,62 @@
 
     <application
         android:allowBackup="true"
+        android:icon="@drawable/ic_studyflow_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_studyflow_logo"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".TelaSobre"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".TelaListaTarefasPaginada"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".TelaBuscarTarefa"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".TelaCadastroTarefa"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".TelaMenu"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+
         <activity
             android:name=".TelaPerfil"
             android:exported="false"
             android:theme="@style/AppTheme" />
+
         <activity
             android:name=".FormCadastro"
             android:exported="false"
             android:theme="@style/AppTheme" />
+
         <activity
             android:name=".FormLogin"
             android:exported="true"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+
+    </application>
 </manifest>

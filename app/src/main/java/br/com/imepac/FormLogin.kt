@@ -18,22 +18,18 @@ class FormLogin : AppCompatActivity() {
     private lateinit var btEntrar: Button
     private lateinit var textTelaCadastro: TextView
     private lateinit var progressBar: ProgressBar
-
     private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_form_login)
-
         supportActionBar?.hide()
 
         iniciarComponentes()
-
         auth = FirebaseAuth.getInstance()
 
         textTelaCadastro.setOnClickListener {
-            val intent = Intent(this, FormCadastro::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, FormCadastro::class.java))
         }
 
         btEntrar.setOnClickListener {
@@ -67,12 +63,9 @@ class FormLogin : AppCompatActivity() {
 
         auth.signInWithEmailAndPassword(email, senha)
             .addOnCompleteListener { task ->
-
                 progressBar.visibility = View.GONE
-
                 if (task.isSuccessful) {
-                    val intent = Intent(this, TelaPerfil::class.java)
-                    startActivity(intent)
+                    startActivity(Intent(this, TelaMenu::class.java))
                     finish()
                 } else {
                     Toast.makeText(
@@ -86,12 +79,9 @@ class FormLogin : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-
         val usuarioAtual = FirebaseAuth.getInstance().currentUser
-
         if (usuarioAtual != null) {
-            val intent = Intent(this, TelaPerfil::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, TelaMenu::class.java))
             finish()
         }
     }
